@@ -1028,6 +1028,7 @@ nav-list-link:hover {
   background: var(--accent-color-primary);
   color: var(--btn-color-white);
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function);
 }
 
 .footer-btn-icon {
@@ -1035,4 +1036,9 @@ nav-list-link:hover {
   align-items: baseline;
   justify-content: center;
   margin-left: 10px;
+}
+
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: #188ce8;
 }
