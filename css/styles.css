@@ -3,6 +3,7 @@
   --secondary-font: "Raleway", sans-serif;
   --background-dark: #2f303a;
   --background-grey: #f5f4fa;
+  --btn-color-white: #FFFFFF;
   --accent-color-primary: #2196f3;
   --section-header-color: #212121;
   --section-padding: 94px 0;
@@ -301,10 +302,6 @@ nav-list-link:hover {
   justify-content: space-between;
   margin-left: -30px;
 }
-
-/* .our-advantages-list > li:not(:last-child) {
-  margin-right: 30px;
-} */
 
 .our-advantages-list-item {
   /* width: 270px; */
@@ -805,11 +802,10 @@ nav-list-link:hover {
   text-align: center;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 12px;
-  
 }
 
 .modal-close-btn {
@@ -849,7 +845,6 @@ nav-list-link:hover {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  
   border-radius: 4px;
   padding-left: 42px;
   transition: border-color 250ms var(--timing-function) ;
@@ -871,13 +866,17 @@ nav-list-link:hover {
   line-height: 1.67;
   letter-spacing: 0.01em;
   color: #757575;
+  margin-bottom: 10px;
 }
+
+/* modal-form-field:last-child {
+  margin-bottom: 20px;
+} */
 
 .modal-form-input-wrapper{
   display: block;
   position: relative;
   margin-top: 4px;
-  margin-bottom: 10px;
 }
 
 .modal-form-icon {
@@ -915,4 +914,109 @@ nav-list-link:hover {
   border-color: var(--accent-color-primary);
 }
 
-.modal-form-check-about:
+.modal-form-check-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-bottom: 30px;
+}
+
+.modal-form-check-about::before {
+  display: block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.modal-form-term:checked + .modal-form-check-about::before {
+  background-color:var(--accent-color-primary);
+  border-color: var(--accent-color-primary);
+  background-image: url(../images/icon-check.svg);
+  background-position: center;
+  background-origin: border-box;
+  background-size: contain;
+}
+
+.modal-form-term:focus + .modal-form-check-about::before {
+  outline: 2px solid var(--accent-color-primary);
+}
+
+.checkbox-term-contract {
+  color: var(--accent-color-primary);
+}
+
+.modal-form-btn {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  align-self: center;
+  min-width: 200px;
+  padding: 10px 55px;
+  color:var(--btn-color-white);
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.modal-form-btn:active {
+  background-color: #188ce8;
+  border: none;
+}
+
+.footer-form {
+  display: flex;
+  /* flex-direction: column; */
+  margin-left: 93px;
+}
+
+.footer-form-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--btn-color-white);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-form-input {
+  display: inline-block;
+  flex-direction: row;
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  background-color: #2f303a;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.footer-btn {
+  display: inline-flex;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 10px 25px;
+  min-width: 200px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background: var(--accent-color-primary);
+  color: var(--btn-color-white);
+  cursor: pointer;
+}

@@ -421,6 +421,13 @@
                     </li>
                 </ul>
             </div>
+            <div class="footer-form">
+                <b class="footer-form-text">подпишитесь на рассылку</b>
+                <form action="#" class="footer-form">
+                    <input type="e-mail" name="footer-form" class="footer-form-input" placeholder="E-mail">
+                    <button type="submit" class="footer-btn">Подписаться</button>
+                </form>
+            </div>
         </div>
 
     </footer>
@@ -473,9 +480,9 @@
                     Комментарий
                     <textarea name="user-comment" id="user-comment" class="modal-form-comment" placeholder="Введите текст"></textarea>
                 </label>
-                <input type="checkbox" name="user-term" class="modal-form-term">
-                <label for="" class="modal-form-check-about">Соглашаюсь с рассылкой и принимаю<a href="">Условия договора</a></label>
-                <button type="submit">Отправить</button> 
+                <input type="checkbox" id="user-term" name="user-term" class="modal-form-term visually-hidden">
+                <label for="user-term" class="modal-form-check-about">Соглашаюсь с рассылкой и принимаю&nbsp;<a href="" class="checkbox-term-contract">Условия договора</a></label>
+                <button type="submit" class="modal-form-btn">Отправить</button> 
             </form>
         </div>
     </div>
