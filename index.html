@@ -365,7 +365,7 @@
     <!--footer-->
     <footer class="dark-background-container footer-container">
 
-        <div class="df container">
+        <class class="df container">
             <div class="footer-content-placing">
                 <address>
                     <div class="footer-logo">
@@ -421,13 +421,23 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-form">
+
+            <div class="footer-form-group">
                 <b class="footer-form-text">подпишитесь на рассылку</b>
-                <form action="#" class="footer-form">
-                    <input type="e-mail" name="footer-form" class="footer-form-input" placeholder="E-mail">
-                    <button type="submit" class="footer-btn">Подписаться</button>
-                </form>
+                
+                    <form action="#" class="footer-form">
+                        <input type="email" name="footer-form" class="footer-form-input" placeholder="E-mail">
+                        <button type="submit" class="footer-btn">Подписаться
+                            <svg class="footer-btn-icon" width="24" height="24">
+                                <use href="./images/sprite.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                            
+                    </form>
             </div>
+                
+            
+
         </div>
 
     </footer>
@@ -478,8 +488,11 @@
 
                 <label for="user-comment" class="modal-form-field">
                     Комментарий
-                    <textarea name="user-comment" id="user-comment" class="modal-form-comment" placeholder="Введите текст"></textarea>
+                    <span class="modal-form-input-wrapper">
+                        <textarea name="user-comment" id="user-comment" class="modal-form-comment" placeholder="Введите текст"></textarea>
+                    </span>
                 </label>
+
                 <input type="checkbox" id="user-term" name="user-term" class="modal-form-term visually-hidden">
                 <label for="user-term" class="modal-form-check-about">Соглашаюсь с рассылкой и принимаю&nbsp;<a href="" class="checkbox-term-contract">Условия договора</a></label>
                 <button type="submit" class="modal-form-btn">Отправить</button> 

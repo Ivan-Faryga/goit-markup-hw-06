@@ -243,6 +243,9 @@ nav-list-link:hover {
   margin: 0 auto 30px;
 }
 .hero-btn {
+  display: inline-block;
+  align-items: center;
+  text-align: center;
   min-width: 200px;
   padding: 12px 32px;
   left: 700px;
@@ -802,7 +805,7 @@ nav-list-link:hover {
   text-align: center;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.17;
+  line-height: 1.15;
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 12px;
@@ -822,6 +825,12 @@ nav-list-link:hover {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   outline: none;
+  transition: fill 250ms var(--timing-function);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  fill: var(--accent-color-primary);
 }
 
 .close-btn-icon {
@@ -860,13 +869,11 @@ nav-list-link:hover {
 }
 
 .modal-form-field {
-  /* margin-bottom: 4px; */
-  /* font-family: var(--main-font) */
   font-size: 12px;
-  line-height: 1.67;
+  line-height: 1.16;
   letter-spacing: 0.01em;
   color: #757575;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 /* modal-form-field:last-child {
@@ -877,6 +884,7 @@ nav-list-link:hover {
   display: block;
   position: relative;
   margin-top: 4px;
+  margin-bottom: 10px;
 }
 
 .modal-form-icon {
@@ -896,7 +904,6 @@ nav-list-link:hover {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
-  margin-top: 4px;
   font-family:var(--main-font)
   font-size: 12px;
   line-height: 1.16;
@@ -923,6 +930,7 @@ nav-list-link:hover {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -936,6 +944,7 @@ nav-list-link:hover {
   cursor: pointer;
   margin-right: 8px;
 }
+
 
 .modal-form-term:checked + .modal-form-check-about::before {
   background-color:var(--accent-color-primary);
@@ -958,7 +967,7 @@ nav-list-link:hover {
   font-weight: 700;
   font-size: 16px;
   font-family: inherit;
-  line-height: 1.9;
+  line-height: 1.87;
   letter-spacing: 0.06em;
   align-self: center;
   min-width: 200px;
@@ -978,24 +987,23 @@ nav-list-link:hover {
   border: none;
 }
 
-.footer-form {
+.footer-form-group {
   display: flex;
-  /* flex-direction: column; */
-  margin-left: 93px;
+  flex-direction: column;
 }
 
 .footer-form-text {
   font-weight: 700;
-  font-size: 14px;
+  /* font-size: 14px; */
   line-height: 1.14;
   color: var(--btn-color-white);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: left;
   margin-bottom: 20px;
 }
+
 .footer-form-input {
-  display: inline-block;
-  flex-direction: row;
   margin-right: 12px;
   width: 358px;
   height: 50px;
@@ -1019,4 +1027,11 @@ nav-list-link:hover {
   background: var(--accent-color-primary);
   color: var(--btn-color-white);
   cursor: pointer;
+}
+
+.footer-btn-icon {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-left: 10px;
 }
